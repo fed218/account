@@ -1,5 +1,5 @@
 # 收支記帳本
-![](https://i.imgur.com/L6QvWvG.jpg)
+![](https://i.imgur.com/lPZ1xe8.png)
 
 ## Demo
 https://fed218.github.io/account/#/

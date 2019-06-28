@@ -15,7 +15,7 @@
         <a href="#" class="text-light" @click.prevent="isShow = !isShow" v-if="!isShow">
           <i class="fas fa-chart-bar fa-3x"></i>
         </a>
-        <a href="#" class="text-warning" @click.prevent="isShow = !isShow" v-else>
+        <a href="#" class="text-primary" @click.prevent="isShow = !isShow" v-else>
           <i class="fas fa-chart-bar fa-3x"></i>
         </a>
       </div>
@@ -32,7 +32,7 @@
         </a>
       </div>
     </section>
-    <section class="bg-danger text-light p-4 main">
+    <section class="bg-secondary text-dark p-4 main">
       <div class="row justify-content-center mb-4">
         <div class="col-md-8 col-12">
           <p class="h1 font-weight-bold d-flex">
@@ -45,18 +45,18 @@
       <div class="row justify-content-center">
         <div class="col-md-8 col-12">
           <div>
-            <table class="table text-light">
+            <table class="table text-dark">
               <tbody>
                 <tr v-for="item in filterArray" :key="item.id">
-                  <td class="text-center">{{item.description}}</td>
-                  <td class="text-right">{{item.money | currency}}</td>
-                  <td class="text-right">
-                    <a href="#" class="text-light mr-4" @click.prevent="openModal(false, item)">
+                  <td class="text-center border-dark pt-3">{{item.description}}</td>
+                  <td class="text-right border-dark pt-3">{{item.money | currency}}</td>
+                  <td class="text-right border-dark">
+                    <a href="#" class="text-dark mr-4" @click.prevent="openModal(false, item)">
                       <i class="fas fa-list-ul"></i>
                     </a>
                     <a
                       href="#"
-                      class="text-light btn"
+                      class="text-dark btn pt-0"
                       @click.prevent="delItem(item.id)"
                       :class="{'disabled': itemLoading === item.id}"
                     >
@@ -77,7 +77,7 @@
     <section class="p-3 bg-dark text-center">
       <div class="row">
         <div class="col-6">
-          <a href="#" class="text-light h2 font-weight-bold" @click.prevent="goPath('/')">支出</a>
+          <a href="#" class="text-primary h2 font-weight-bold" @click.prevent="goPath('/')">支出</a>
         </div>
         <div class="col-6">
           <a href="#" class="text-light h2 font-weight-bold"
@@ -120,12 +120,12 @@
             </div>
           </div>
           <div class="modal-body p-0">
-            <section class="bg-danger text-light pt-2">
+            <section class="bg-secondary text-dark pt-2">
               <div class="row align-items-center main-edit">
                 <div class="col-3 text-center p-3">
                   <a
                     href="#"
-                    class="text-light"
+                    class="text-dark"
                     v-if="tempExpend.category !== '飲食'"
                     @click.prevent="changeValue('飲食')"
                   >
@@ -134,7 +134,7 @@
                   </a>
                   <a
                     href="#"
-                    class="text-warning"
+                    class="text-primary"
                     v-if="tempExpend.category === '飲食'"
                     @click.prevent="changeValue('飲食')"
                   >
@@ -145,7 +145,7 @@
                 <div class="col-3 text-center p-3">
                   <a
                     href="#"
-                    class="text-light"
+                    class="text-dark"
                     v-if="tempExpend.category !== '房租'"
                     @click.prevent="changeValue('房租')"
                   >
@@ -154,7 +154,7 @@
                   </a>
                   <a
                     href="#"
-                    class="text-warning"
+                    class="text-primary"
                     v-if="tempExpend.category === '房租'"
                     @click.prevent="changeValue('房租')"
                   >
@@ -165,7 +165,7 @@
                 <div class="col-3 text-center p-3">
                   <a
                     href="#"
-                    class="text-light"
+                    class="text-dark"
                     v-if="tempExpend.category !== '交通'"
                     @click.prevent="changeValue('交通')"
                   >
@@ -174,7 +174,7 @@
                   </a>
                   <a
                     href="#"
-                    class="text-warning"
+                    class="text-primary"
                     v-if="tempExpend.category === '交通'"
                     @click.prevent="changeValue('交通')"
                   >
@@ -185,7 +185,7 @@
                 <div class="col-3 text-center p-3">
                   <a
                     href="#"
-                    class="text-light"
+                    class="text-dark"
                     v-if="tempExpend.category !== '投資'"
                     @click.prevent="changeValue('投資')"
                   >
@@ -194,7 +194,7 @@
                   </a>
                   <a
                     href="#"
-                    class="text-warning"
+                    class="text-primary"
                     v-if="tempExpend.category === '投資'"
                     @click.prevent="changeValue('投資')"
                   >
@@ -205,7 +205,7 @@
                 <div class="col-3 text-center p-3">
                   <a
                     href="#"
-                    class="text-light"
+                    class="text-dark"
                     v-if="tempExpend.category !== '社交'"
                     @click.prevent="changeValue('社交')"
                   >
@@ -214,7 +214,7 @@
                   </a>
                   <a
                     href="#"
-                    class="text-warning"
+                    class="text-primary"
                     v-if="tempExpend.category === '社交'"
                     @click.prevent="changeValue('社交')"
                   >
@@ -225,7 +225,7 @@
                 <div class="col-3 text-center p-3">
                   <a
                     href="#"
-                    class="text-light"
+                    class="text-dark"
                     v-if="tempExpend.category !== '娛樂'"
                     @click.prevent="changeValue('娛樂')"
                   >
@@ -234,7 +234,7 @@
                   </a>
                   <a
                     href="#"
-                    class="text-warning"
+                    class="text-primary"
                     v-if="tempExpend.category === '娛樂'"
                     @click.prevent="changeValue('娛樂')"
                   >
@@ -245,7 +245,7 @@
                 <div class="col-3 text-center p-3">
                   <a
                     href="#"
-                    class="text-light"
+                    class="text-dark"
                     v-if="tempExpend.category !== '醫療'"
                     @click.prevent="changeValue('醫療')"
                   >
@@ -254,7 +254,7 @@
                   </a>
                   <a
                     href="#"
-                    class="text-warning"
+                    class="text-primary"
                     v-if="tempExpend.category === '醫療'"
                     @click.prevent="changeValue('醫療')"
                   >
@@ -265,7 +265,7 @@
                 <div class="col-3 text-center p-3">
                   <a
                     href="#"
-                    class="text-light"
+                    class="text-dark"
                     v-if="tempExpend.category !== '其他'"
                     @click.prevent="changeValue('其他')"
                   >
@@ -274,7 +274,7 @@
                   </a>
                   <a
                     href="#"
-                    class="text-warning"
+                    class="text-primary"
                     v-if="tempExpend.category === '其他'"
                     @click.prevent="changeValue('其他')"
                   >
